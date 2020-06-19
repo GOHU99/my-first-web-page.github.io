@@ -2,265 +2,184 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Muffins</title>
+  <title>Les Gossips du bon vieux SCHNEIDER</title>
   <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <script src="https://kit.fontawesome.com/c366949ca7.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="text-center">
 
   <div class="line-transparent">
-    <div class="line-dark"></div>
+    <div class="line-hard"></div>
     <div class="line-medium"></div>
     <div class="line-light"></div>
   </div>
 
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(images/patisserie.jpg);">
-    <div class="container">
+  <div class="navbar">
+    <img src="data:image/jpeg;base64,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" class="logo">
+    <div class="links">
+      <a href="" class="link">Qui je suis ?</a>
+      <a href="" class="link">les gossips les plus oupssss </a>
 
-    <h1 class="color-green">Les Muffins de Grand Mère</h1>
-    <h2>Fondants et croustillants</h2>
-    <img class="avatar" src="images/logo.png" alt="logo">
-    <br>
-    <a href="https://www.marmiton.org/recettes/recette_muffins-tres-simples_166385.aspx" class="btn-pink">En savoir plus</a>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+        Mes contacts
+      </button>
 
-
-    <!-- Button trigger modal -->
-    <button type="button" class="btn-pink" data-toggle="modal" data-target="#exampleModal">
-      Infos sur moi
-    </button>
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h3 class="color-blue">Le bon vieux SCHNEIDER</h3>
+              <p>contact@lebonvieuxschneider.com</p>
+              <div>
+                <a class="socials" href="">
+                  <i class="fab fa-facebook-square"></i>
+                </a>
+                <a class="socials" href="">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a class="socials" href="">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </div>
+            </div>
+            <div class="modal-footer">
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <a href="about.html" class="btn-pink">À mon sujet</a>
-
-    <a href="mailto:coco@gmail.com" class="btn-pink" target="_blank">Envoyez moi un mail!!!</a>
-
-    <a href="tel:0606060606" class="btn-pink">Appelle Moi!!!</a>
-
-    <a href="#productions" class="btn-pink">Vos productions</a>
-
-    <div class='switchboxCont'>
-      <input class='switch default' id='first' type='checkbox'>
-      <label for='first'></label>
-    </div>
 
     </div>
   </div>
 
-
-  <div class="green-frame margin-100">
-    <h3><i class="fas fa-cookie-bite"></i> Présentation</h3>
-    <p><b>Les muffins</b> sont de petits gâteaux individuels s'apparentant aux madeleines. Apparus au pays de Galles aux alentours du XIe siècle, ils sont très répandus dans les pays anglo-saxons, principalement aux États-Unis. Le principe caractéristique de fabrication des muffins consiste à préparer le mélange des ingrédients liquides et celui des ingrédients secs séparément, puis à mélanger rapidement et <i>grossièrement</i> les deux préparations. Contrairement aux cupcakes, les muffins n’ont jamais de glaçage.
+  <div class="cadre">
+    <h1 class="color-green">Les gossips de Gogo</h1>
+    <h2 class="color-green">chic & choc</h2>
+    <img src="data:image/jpeg;base64,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" alt="scandales" class="avatar">
     <br>
-    Les muffins sont traditionnellement sucrés. On peut les retrouver au chocolat (avec des pépites de chocolat) ou nature, mais il existe de nombreuses autres variétés : fraise, banane, framboise, orange, vanille, myrtille ou bleuets, etc.
+    <a href="https://www.public.fr/" target="_blanck" class="btn-pink">En savoir plus</a>
+  </div>
+
+  <div class="cadre">
+    <h3 class="color-green">Présentation</h3>
+    <p><b>Chic</b> , <i>ou chic</i>, voici la description parfaite des gossips présents ici. Des peoples français ou stars américaines tout y passent. 
     <br>
-    Il existe également des muffins salés, les English muffins ou muffins anglais, ressemblant à des sortes de petites crêpes très épaisses, faits à partir de pâte levée. Ces muffins salés sont quelquefois faits avec de la farine complète. Ils sont notamment employés comme base de la préparation des "œufs Bénédicte".</p>
+    Les gossips sont des conversations informelles ou des rumeurs sur d'autres personnes, impliquant généralement des détails qui ne sont pas confirmés comme étant vrais.</p>
   </div>
 
-  <div class="green-frame margin-100">
-    <h3><i class="fas fa-cookie-bite"></i> La recette en vidéo</h3>
-    <iframe width="500" height="300" src="https://www.youtube.com/embed/fBuSNu2m3XA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <div class="cadre">
+    <h3 class="color-green">Les scandales de stars </h3>
+    <iframe width="500" height="300" src="https://www.youtube.com/embed/8r1bL4GnVos"frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 
+  <div class="horizontal-position">
 
-  <div class="two-sections margin-100">
-    <div class="green-frame text-left margin-50px-right">
-      <h4><i class="fas fa-cookie-bite"></i> Ingredients</h4>
-
+    <div class="cadre-ingredients text-left">
+    <h4  class="color-green">Un gossip croustillant est composé de :</h4>
       <ul>
-        <li> 280 g de farine</li>
-        <li> 2 oeufs</li>
-        <li> 100 g de sucre</li>
-        <li> 150 ml de lait</li>
-        <li> 80 g de beurre (ou 8 cuillères à soupe d'huile)</li>
-        <li> 1 sachet de levure chimique</li>
-        <li> 1 sachet de sucre vanillé</li>
-        <li> 1 pincée de sel</li>
-        <li> Cannelle</li>
-        <li> Extrait de vanille</li>
+        <li> 1 portion de piquant</li>
+        <li> 2 portions de mensonges</li>
+        <li> 3 portions de ragotages </li>
+        <li> 1 portion de vérité</li>
+        <li> 3 portions de coquineries</li>
+        <li> 1 portion de buzz</li>
+        <li> 2 portions d'argents</li>
+        <li> 2 portions de malices</li>
+        <li> Et beaucoup de blabla/li>
+        
       </ul>
     </div>
 
-    <div class="green-frame text-left">
-      <h4><i class="fas fa-cookie-bite"></i> Préparation</h4>
-
+    <div class="cadre-preparartion text-left">
+      <h4 class="color-green">top 5 des gossips les plus scandaleux de ces dernières années aux Etats-Unis :</h4>
       <ol>
         <li>
-          <p><b>Etape 1</b> :
-            Dans un premier saladier : mélanger la farine, le sucre, le sel, le sucre vanillé et la levure.
+          <p><b>Kanye West</b> :
+             Ce n’est pas le fait qu’il adore Donald Trump qui a le plus soulevé de critiques, mais bien ses propos sur l’esclavage, qui était pour lui « un choix ». 
+        </li>
+        <li>
+          <p><b>Donald Trump</b> :
+            Stormy Daniels, a affirmé qu’elle avait signé un accord de confidentialité avec le 45e président des États-Unis juste avant son élection. Cette star du porno affirme qu’elle a eu des relations sexuelles avec Donald Trump.
           </p>
         </li>
         <li>
-          <p><b>Etape 2</b> :
-            Dans un deuxième saladier : mélanger le lait, l'huile(ou beurre fondu) et les oeufs.
-          </p>
+          <p><b>Roseanne</b> :
+            Roseanne Barr s’était vue offrir un retour de son show « Roseanne » par la chaîne américaine ABC. Alors qu’une deuxième saison de ce « revival » était prévue, l’actrice a tenu des propos impardonnables sur Twitter. Elle a attaqué Valérie Jarett, la conseillère de Barack Obama, affirmant qu’elle était la « progéniture des Frères musulmans et la Planète des singes ». 
         </li>
         <li>
-          <p><b>Etape 3</b> :
-            Verser le contenu du second saladier dans le premier et remuer jusqu'à obtenir une pâte plutôt lisse. Laissez tout de même quelques petits grumeaux.
-          </p>
+          <p><b>Demi Lovato</b> :
+            En juillet dernier, Demi Lovato a été hospitalisée suite à une overdose.
         </li>
         <li>
-          <p><b>Etape 4</b> :
-            Mettre au four 15 min à 180°C (thermostat 6)
+          <p><b>Ben Affleck</b> :
+            Depuis son divorce avec Jennifer Garner, Ben Affleck ne va pas bien. L’acteur souffre d’alcoolisme et a eu une grosse période de dépression où il ne mangeait plus, ne se lavait plus et ne faisait que boire.
           </p>
         </li>
       </ol>
     </div>
   </div>
 
-
-  <div id="productions"></div>
-
-
-  <div class="green-frame margin-100">
-    <h3><i class="fas fa-cookie-bite"></i> Vos productions</h3>
+  <div class="cadre">
+    <h3 class="color-green">Où trouver les meilleurs gossips du monde de stars?</h3>
+    <iframe src="https://www.voici.fr/"frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
 
 
-    <div class="three-sections">
 
+
+  <div class="cadre">
+
+    <h3 class="color-green m-4">Et si on allait lire ?</h3>
+    <div class="d-flex justify-content-between">
       <div class="card" style="width: 18rem;">
-        <img src="images/prod1.jpg" class="card-img-top" alt="...">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTXSsQg5I4PA2E80F_r40wsX3eqxZjJXEXBF--JKKnnW7iClWvt&usqp=CAU" class="card-img-top" alt="images/soupe2.jpg">
         <div class="card-body">
-          <h5 class="card-title">Muffins de Alice</h5>
-          <p class="card-text">"Je me suis super amusée à les faire :)"</p>
-  <!--         <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          <h5 class="card-title">Françoise Hardy dans la tourmente : Thomas Dutronc ne donne pas de bonnes nouvelles </h5>
+          <p class="card-text">Le scandale n'est pas loin.<br>à vous de lire!</p>
+          <a href="#" class="btn btn-success">Plus d'infos ici</a>
         </div>
       </div>
 
       <div class="card" style="width: 18rem;">
-        <img src="images/prod2.jpg" class="card-img-top" alt="...">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRsqjkeQ6jr_-ai3WGhHSYT-BQj-WO1ts_0DUkCrMCB-XXw875x&usqp=CAU" class="card-img-top" alt="images/scandale3.jpg">
         <div class="card-body">
-          <h5 class="card-title">Muffins de Bob</h5>
-          <p class="card-text">"Je me suis super amusée à les faire :)"</p>
-  <!--         <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          <h5 class="card-title">Les Z’amours : en couple avec son frère, une candidate explique leur étonnante situation </h5>
+          <p class="card-text">Le scandale n'est pas loin.<br>à vous de lire!</p>
+          <a href="#" class="btn btn-success">Plus d'infos ici</a>
         </div>
       </div>
 
       <div class="card" style="width: 18rem;">
-        <img src="images/prod3.jpg" class="card-img-top" alt="...">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTfBE5OItSLSjrAKpZN0MxIPpVvMLZ1Xg1jXDEcQh29zeVVlcP_&usqp=CAU" class="card-img-top" alt="images/scandale4.jpg">
         <div class="card-body">
-          <h5 class="card-title">Muffins de Charly</h5>
-          <p class="card-text">"Je me suis super amusée à les faire :)"</p>
-  <!--         <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          <h5 class="card-title">« C’est un scoop » : Jean-Marie Bigard fait une folle révélation sur Emmanuel Macron</h5>
+          <p class="card-text">Le scandale n'est pas loin.<br>à vous de lire!</p>
+          <a href="#" class="btn btn-success">Plus d'infos ici</a>
         </div>
       </div>
-
     </div>
-
-  </div>
-
-  <div class="green-frame margin-100">
-    <h3><i class="fas fa-cookie-bite"></i> Ajouter votre production</h3>
-
-    <div class="typeform-widget" data-url="https://jonathanserafini.typeform.com/to/kznd7r" data-transparency="50" data-hide-headers=true data-hide-footer=true style="width: 100%; height: 300px;"></div>
-    <script>
-    (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })()
-    </script>
-    <div style="font-family: Sans-Serif;font-size: 12px;color: #999;opacity: 0.5; padding-top: 5px;"> powered by <a href="https://admin.typeform.com/signup?utm_campaign=kznd7r&utm_source=typeform.com-01D8JWWB479X4Z5V6G570B0ZZK-free&utm_medium=typeform&utm_content=typeform-embedded-poweredbytypeform&utm_term=EN" style="color: #999" target="_blank">Typeform</a>
-    </div>
-
-
   </div>
 
 
-
-  <div class="green-frame margin-100">
-    <h3><i class="fas fa-cookie-bite"></i> Une super adresse!</h3>
-
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2828.351573239746!2d-0.5746971844779813!3d44.855137081896586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd552994e9d37bed%3A0x91405fbf10a89d71!2sMaison%20Boileau!5e0!3m2!1sfr!2sfr!4v1589547826566!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-
+  <div class="line-transparent">
+    <div class="line-hard"></div>
+    <div class="line-medium"></div>
+    <div class="line-light"></div>
   </div>
 
+  <script src="https://kit.fontawesome.com/18ee24e4d3.js"></script>
 
-  <video src="videos/test.mp4" width="500" controls>
-    Votre navigateur ne gère pas l'élément <code>video</code>.
-  </video>
-
-
-  <div class="machine">
-    <div id="belt-container" class="belt-container"></div>
-  </div>
-
-
-  <iframe width="966" height="543" src="https://www.youtube.com/embed/ixf55lEwPv0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
-
-  <script>
-    let beltCont = $("#belt-container");
-
-    for (let i = 1; i <= 150; i++) {
-      let belt = $("<div />");
-      let cake = $("<div />");
-      let layerOne = $("<div />");
-      let filling = $("<div />");
-      let layerTwo = $("<div />");
-      let topping = $("<div />");
-      let candle = $("<div />");
-
-      layerOne.css({
-        backgroundColor: "hsl(" + Math.floor(Math.random() * i * 50) + ", 30%, 60%"
-      });
-
-      layerTwo.css({
-        backgroundColor: "hsl(" + Math.floor(Math.random() * i * 50) + ", 60%, 35%"
-      });
-
-      topping.css({
-        backgroundColor: "hsl(" + Math.floor(Math.random() * i * 25) + ", 50%, 50%"
-      });
-
-      belt.addClass("belt");
-      cake.addClass("cake");
-      layerOne.addClass("layer layer-1");
-      filling.addClass("filling");
-      layerTwo.addClass("layer layer-2");
-      topping.addClass("layer topping");
-      candle.addClass("candle");
-
-      belt.css({
-        left: 1 * i * 150
-      });
-
-      cake.append(layerOne, filling, layerTwo, topping, candle);
-      belt.append(cake);
-
-      beltCont.append(belt);
-    }
-
-  </script>
-
-
-
-
-
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </body>
 </html>
